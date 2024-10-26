@@ -1,6 +1,10 @@
 $mainColor: #1f1800;
+$secondColor: #4d4d4d;
+$backgroundColor: #f4f4f4;
+$yellowBG: #f7bd01;
 body {
     margin: 0px;
+    overflow-x: hidden;
 }
 
 header {
@@ -99,7 +103,7 @@ header {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    height: 100vh;
+    height: max-content;
     min-height: 100vh;
 }
 .hero-wrapper-inner {
@@ -131,6 +135,281 @@ header {
     padding: 24px 16px;
     border-radius: 8px;
     background-image: linear-gradient(45deg, #e7b000, #f1c32d);
+}
+.about-us {
+    background-color: $backgroundColor;
+    background-image: url("/img/about-us-bg.png");
+    background-repeat: no-repeat;
+    padding: 5rem 1.8rem;
+    .about-us-title {
+        display: flex;
+        justify-content: space-between;
+        .about-us-text {
+            width: 50%;
+            h2 {
+                font-size: 3rem;
+                color: $mainColor;
+            }
+            p {
+                font-size: 1.5rem;
+                color: $secondColor;
+            }
+        }
+        video {
+            height: 50%;
+            width: 40%;
+        }
+    }
+    .cards {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: space-between;
+        .card {
+            width: 28rem;
+            height: 15rem;
+        }
+        .card-title {
+            display: flex;
+            height: 55px;
+            img {
+                margin-right: 1rem;
+                width: 55px;
+                height: inherit;
+            }
+            h3 {
+                color: $mainColor;
+            }
+            p {
+                color: $secondColor;
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+.menu-projects {
+    margin-top: 5rem;
+    margin-bottom: 3.75rem;
+    height: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .yellow-line {
+        display: inline-block;
+        height: 2px;
+        width: 15rem;
+        border: 0px;
+        background-color: yellow;
+        margin: 0px;
+        margin-right: 30px;
+    }
+    .projects-list {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        a {
+            text-decoration: none;
+            margin: 0 30px;
+            color: $mainColor;
+        }
+    }
+}
+.case {
+    width: 85rem;
+    background-image: url("./img/case-bg.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    margin: 0 auto;
+    .case-content {
+        width: 42rem;
+        height: 23rem;
+        margin: 8rem 2rem;
+        div {
+            border: 1px solid #41c602;
+            width: 120px;
+            height: 40px;
+            span {
+                display: block;
+                margin: 10px 25px;
+            }
+        }
+        h2 {
+            color: $mainColor;
+            font-size: 2rem;
+        }
+        p {
+            color: $secondColor;
+        }
+        a {
+            color: $mainColor;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: #e7b000;
+            width: 245px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+.text {
+    padding: 5rem 0;
+    background-color: $yellowBG;
+    h2 {
+        text-align: center;
+        font-size: 3rem;
+        color: $mainColor;
+    }
+    p {
+        text-align: center;
+        font-size: 1rem;
+        color: $secondColor;
+        margin: 32px 0;
+    }
+    a {
+        color: $mainColor;
+        text-decoration: none;
+        font-weight: bold;
+        background-color: #1a1a1a;
+        width: 245px;
+        height: 60px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+}
+.feedback {
+    padding: 5rem 2rem;
+    h2 {
+        font-size: 3rem;
+        color: $mainColor;
+    }
+    .slider {
+        margin: 30px 0;
+        display: flex;
+        width: 85rem;
+        height: 13rem;
+        .slide {
+            border: 1px solid $yellowBG;
+            width: 550px;
+            padding: 1.5rem;
+            margin-right: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            color: $mainColor;
+            .slide-img {
+                margin-right: 1rem;
+            }
+            .slide-text {
+                h3 {
+                    margin: 0;
+                }
+                p {
+                    font-size: 1rem;
+                    color: $secondColor;
+                }
+            }
+        }
+    }
+}
+.form-block {
+    background-color: $backgroundColor;
+    padding: 4.25rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    .form {
+        width: 900px;
+    }
+    input {
+        width: 10rem;
+        color: $secondColor;
+        padding: 16px 8px;
+        margin-right: 24px;
+    }
+    textarea {
+        padding: 16px 8px;
+        margin-top: 24px;
+        display: block;
+        resize: none;
+        width: 500px;
+        height: 100px;
+    }
+    a {
+        margin-top: 2rem;
+        color: $mainColor;
+        text-decoration: none;
+        font-weight: bold;
+        background-color: $yellowBG;
+        width: 245px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .contacts {
+        span {
+            display: block;
+            margin: 24px 0;
+            position: relative;
+        }
+        .tel::before {
+            content: "";
+            background-size: cover;
+            display: inline-block;
+            position: absolute;
+            left: -25px;
+            top: -3px;
+            width: 25px;
+            height: 25px;
+            background-image: url("/img/icon-tel.png");
+        }
+        .mail::before {
+            content: "";
+            background-size: cover;
+            display: inline-block;
+            position: absolute;
+            left: -25px;
+            top: -3px;
+            width: 25px;
+            height: 25px;
+            background-image: url("/img/icon-mail.png");
+        }
+        .address::before {
+            content: "";
+            background-size: cover;
+            display: inline-block;
+            position: absolute;
+            left: -25px;
+            top: -3px;
+            width: 25px;
+            height: 25px;
+            background-image: url("/img/icon-address.png");
+        }
+        .time {
+            margin-left: 24px;
+        }
+    }
+}
+footer {
+    background-color: $mainColor;
+    color: white;
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    img {
+        margin-left: 32px;
+    }
+    .menu-desktop {
+        display: block;
+        margin-right: 32px;
+    }
+    .menu-desktop a {
+        text-decoration: none;
+        margin: 0px 16px;
+        color: white;
+    }
 }
 @media (max-width: 1120px) {
     :root {
