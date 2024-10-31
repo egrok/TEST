@@ -4,10 +4,8 @@ $mainColor: #1f1800;
 $secondColor: #4d4d4d;
 $backgroundColor: #f4f4f4;
 $yellowBG: #f7bd01;
-
-body {
-    margin: 0px;
-    overflow-x: hidden;
+.outWrapper {
+    margin: 20px auto;
 }
 :root {
     font-size: 16px;
