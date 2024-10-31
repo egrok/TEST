@@ -5,17 +5,17 @@
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Vite App</title>
-        <link rel="styleshenet" href="null.css" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="null.css" />
+        <link rel="stylesheet" href="style.scss" />
     </head>
     <body>
-        <header>
+        <header class="wrapper">
             <img src="img/logo.png" alt="logo" />
             <div class="menu-desktop">
-                <a href="#">Про нас</a>
-                <a href="#">Наші проєкти</a>
-                <a href="#">Приєднуйтесь до нас</a>
-                <a href="#">Зв'яжіться з нами</a>
+                <a href="#about-us">Про нас</a>
+                <a href="#projects">Наші проєкти</a>
+                <a href="#join-us">Приєднуйтесь до нас</a>
+                <a href="#contact">Зв'яжіться з нами</a>
             </div>
             <nav class="navigation">
                 <input type="checkbox" id="hamburger" />
@@ -32,7 +32,7 @@
                 </div>
             </nav>
         </header>
-        <main>
+        <main class="wrapper main">
             <div class="hero-wrapper">
                 <div class="hero-wrapper-inner">
                     <div class="hero-text">
@@ -45,7 +45,7 @@
                     </div>
                 </div>
             </div>
-            <section class="about-us">
+            <section class="about-us" id="about-us">
                 <div class="about-us-title">
                     <div class="about-us-text">
                         <h2>Чому варто бути з нами?</h2>
@@ -88,6 +88,19 @@
                             взаємного росту та процвітання.
                         </p>
                     </div>
+
+                    <div class="card">
+                        <div class="card-title">
+                            <img src="/img/card-hands.png" alt="van-icon" />
+                            <h3>Створюємо разом</h3>
+                        </div>
+                        <p>
+                            Ми прагнемо бачити результати своєї спільної роботи.
+                            Ваша довіра та участь є основою нашого успіху. Ми
+                            цінуємо кожного клієнта, і ваша задоволеність - наша
+                            найбільша нагорода.
+                        </p>
+                    </div>
                     <div class="card">
                         <div class="card-title">
                             <img src="/img/card-hands.png" alt="van-icon" />
@@ -102,34 +115,172 @@
                     </div>
                 </div>
             </section>
-            <div class="menu-projects">
-                <hr class="yellow-line" />
-                <div class="projects-list">
-                    <a href="#">Зелений кооператив</a>
-                    <a href="#">Спільнота комфорту</a>
-                    <a href="#">Екологічний Оазис</a>
-                    <a href="#">Беспечне майбутне</a>
-                    <a href="#">Сучасний Вибір</a>
+            <div class="menu-projects" id="projects">
+                <div id="controls">
+                    <label for="slide1">Зелений кооператив</label>
+                    <label for="slide2">Спільнота комфорту</label>
+                    <label for="slide3">Екологічний Оазис</label>
+                    <label for="slide4">Беспечне майбутне</label>
+                    <label for="slide5">Сучасний Вибір</label>
                 </div>
-            </div>
-            <div class="case">
-                <div class="case-content">
-                    <div>
-                        <span>Завершено</span>
+                <div id="slider">
+                    <input type="radio" name="slider" id="slide1" checked />
+                    <input type="radio" name="slider" id="slide2" />
+                    <input type="radio" name="slider" id="slide3" />
+                    <input type="radio" name="slider" id="slide4" />
+                    <input type="radio" name="slider" id="slide5" />
+                    <div id="slides">
+                        <div id="overflow">
+                            <div class="inner">
+                                <div class="slide slide_1">
+                                    <div class="slide-content">
+                                        <div>
+                                            <span>Завершено</span>
+                                        </div>
+                                        <h2>
+                                            Зелений кооператив: Створення
+                                            екологічної спільноти
+                                        </h2>
+                                        <p>
+                                            Компанія "Розбудова кооперативів"
+                                            успішно реалізувала проєкт "Зелений
+                                            кооператив", що забезпечив створення
+                                            екологічної спільноти. Резиденти
+                                            кооперативу заощаджують на
+                                            комунальних послугах, активно
+                                            взаємодіють між собою та сприяють
+                                            збереженню довкілля. Цей проєкт став
+                                            прикладом сталого розвитку та
+                                            популяризації екологічних ініціатив
+                                            у будівництві.
+                                        </p>
+                                        <a href="#"
+                                            ><span>Дізнатися більше</span></a
+                                        >
+                                    </div>
+                                    <img
+                                        class="slide-img"
+                                        src="/img/case-bg.png"
+                                    />
+                                </div>
+                                <div class="slide slide_2">
+                                    <div class="slide-content">
+                                        <div>
+                                            <span>Завершено2</span>
+                                        </div>
+                                        <h2>
+                                            Зелений кооператив: Створення
+                                            екологічної спільноти
+                                        </h2>
+                                        <p>
+                                            Компанія "Розбудова кооперативів"
+                                            успішно реалізувала проєкт "Зелений
+                                            кооператив", що забезпечив створення
+                                            екологічної спільноти. Резиденти
+                                            кооперативу заощаджують на
+                                            комунальних послугах, активно
+                                            взаємодіють між собою та сприяють
+                                            збереженню довкілля. Цей проєкт став
+                                            прикладом сталого розвитку та
+                                            популяризації екологічних ініціатив
+                                            у будівництві.
+                                        </p>
+                                        <a href="#"
+                                            ><span>Дізнатися більше</span></a
+                                        >
+                                    </div>
+                                    <img src="/img/case-bg.png" />
+                                </div>
+                                <div class="slide slide_3">
+                                    <div class="slide-content">
+                                        <div>
+                                            <span>Завершено3</span>
+                                        </div>
+                                        <h2>
+                                            Зелений кооператив: Створення
+                                            екологічної спільноти
+                                        </h2>
+                                        <p>
+                                            Компанія "Розбудова кооперативів"
+                                            успішно реалізувала проєкт "Зелений
+                                            кооператив", що забезпечив створення
+                                            екологічної спільноти. Резиденти
+                                            кооперативу заощаджують на
+                                            комунальних послугах, активно
+                                            взаємодіють між собою та сприяють
+                                            збереженню довкілля. Цей проєкт став
+                                            прикладом сталого розвитку та
+                                            популяризації екологічних ініціатив
+                                            у будівництві.
+                                        </p>
+                                        <a href="#"
+                                            ><span>Дізнатися більше</span></a
+                                        >
+                                    </div>
+                                    <img src="/img/case-bg.png" />
+                                </div>
+                                <div class="slide slide_4">
+                                    <div class="slide-content">
+                                        <div>
+                                            <span>Завершено4</span>
+                                        </div>
+                                        <h2>
+                                            Зелений кооператив: Створення
+                                            екологічної спільноти
+                                        </h2>
+                                        <p>
+                                            Компанія "Розбудова кооперативів"
+                                            успішно реалізувала проєкт "Зелений
+                                            кооператив", що забезпечив створення
+                                            екологічної спільноти. Резиденти
+                                            кооперативу заощаджують на
+                                            комунальних послугах, активно
+                                            взаємодіють між собою та сприяють
+                                            збереженню довкілля. Цей проєкт став
+                                            прикладом сталого розвитку та
+                                            популяризації екологічних ініціатив
+                                            у будівництві.
+                                        </p>
+                                        <a href="#"
+                                            ><span>Дізнатися більше</span></a
+                                        >
+                                    </div>
+                                    <img src="/img/case-bg.png" />
+                                </div>
+                                <div class="slide slide_5">
+                                    <div class="slide-content">
+                                        <div>
+                                            <span>Завершено5</span>
+                                        </div>
+                                        <h2>
+                                            Зелений кооператив: Створення
+                                            екологічної спільноти
+                                        </h2>
+                                        <p>
+                                            Компанія "Розбудова кооперативів"
+                                            успішно реалізувала проєкт "Зелений
+                                            кооператив", що забезпечив створення
+                                            екологічної спільноти. Резиденти
+                                            кооперативу заощаджують на
+                                            комунальних послугах, активно
+                                            взаємодіють між собою та сприяють
+                                            збереженню довкілля. Цей проєкт став
+                                            прикладом сталого розвитку та
+                                            популяризації екологічних ініціатив
+                                            у будівництві.
+                                        </p>
+                                        <a href="#"
+                                            ><span>Дізнатися більше</span></a
+                                        >
+                                    </div>
+                                    <img src="/img/case-bg.png" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h2>Зелений кооператив: Створення екологічної спільноти</h2>
-                    <p>
-                        Компанія "Розбудова кооперативів" успішно реалізувала
-                        проєкт "Зелений кооператив", що забезпечив створення
-                        екологічної спільноти. Резиденти кооперативу заощаджують
-                        на комунальних послугах, активно взаємодіють між собою
-                        та сприяють збереженню довкілля. Цей проєкт став
-                        прикладом сталого розвитку та популяризації екологічних
-                        ініціатив у будівництві.
-                    </p>
-                    <a href="#"><span>Дізнатися більше</span></a>
                 </div>
             </div>
+
             <div class="text">
                 <h2>У нас є 15 років досвіду у будівництві</h2>
                 <p>
@@ -138,10 +289,10 @@
                 </p>
                 <a href="#"><span>Приєднатися до нас</span></a>
             </div>
-            <div class="feedback">
+            <div class="feedback" id="join-us">
                 <h2>Що говорять про нас ті хто вже з нами</h2>
-                <div class="slider">
-                    <div class="slide">
+                <div class="slider1">
+                    <div class="slide2">
                         <div class="slide-img">
                             <img src="img/slide-img1.png" alt="face" />
                         </div>
@@ -158,7 +309,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="slide">
+                    <div class="slide2">
                         <div class="slide-img">
                             <img src="img/slide-img2.png" alt="face" />
                         </div>
@@ -177,38 +328,44 @@
                     </div>
                 </div>
             </div>
-            <div class="form-block">
+            <div class="form-block" id="contact">
                 <div class="form">
                     <h2>Залишились питання?</h2>
                     <p>
                         Заповніть форма у наші консультанти звяжуться з вами у
                         найближчий час
                     </p>
-                    <input type="text" placeholder="Ім’я" />
-                    <input
-                        type="tel"
-                        placeholder="Телефон"
-                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                        maxlength="12"
-                    />
+                    <div class="inputs">
+                        <input type="text" placeholder="Ім’я" />
+                        <input
+                            type="tel"
+                            placeholder="Телефон"
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                            maxlength="12"
+                        />
+                    </div>
                     <textarea placeholder="Ваше питання..."></textarea>
                     <a href="#"><span>Відправити запит</span></a>
                 </div>
                 <div class="contacts">
-                    <h3>Наші контакти</h3>
-                    <span class="tel">8 800 657 59 81</span>
-                    <span class="mail">buildingcooperatives@mail.ua</span>
-                    <span class="address"
-                        >36231, Івано-Франківська область, місто
-                        Івано-Франківськ, вул. Прорізна, 81</span
-                    >
-                    <h3>Розклад роботи</h3>
-                    <span class="time">Пн - Пт : 10:00 - 20:00</span>
-                    <span class="time">Сб - Нд : 10:00 - 18:00</span>
+                    <div>
+                        <h3>Наші контакти</h3>
+                        <span class="tel">8 800 657 59 81</span>
+                        <span class="mail">buildingcooperatives@mail.ua</span>
+                        <span class="address"
+                            >36231, Івано-Франківська область, місто
+                            Івано-Франківськ, вул. Прорізна, 81</span
+                        >
+                    </div>
+                    <div>
+                        <h3>Розклад роботи</h3>
+                        <span class="time">Пн - Пт : 10:00 - 20:00</span>
+                        <span class="time">Сб - Нд : 10:00 - 18:00</span>
+                    </div>
                 </div>
             </div>
         </main>
-        <footer>
+        <footer class="wrapper footer">
             <img src="img/logo.png" alt="logo" />
             <div class="menu-desktop">
                 <a href="#">Про нас</a>
